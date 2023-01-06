@@ -14,11 +14,3 @@ def home(request):
     })
     ...
     # return HTTP response para Cliente
-
-
-def contato(resquest):
-    return HttpResponse('contato')
-
-
-def sobre(request):
-    return HttpResponse('sobre')
