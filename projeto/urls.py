@@ -17,18 +17,13 @@ from django.contrib import admin
 from django.http import HttpResponse
 from django.urls import path
 
-# Cliente faz um HTTP request e recebe um HTTP response
-
-# HTTP REQUEST
-
-
-def my_view(request):
-    return HttpResponse('UMA LINDA STRING')
-    ...
-    # return HTTP response para Cliente
-
+from recipes.views import contato, home, sobre
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sobre/', my_view)
+    # Deixa primeiro paramentro vazio para criar pagina inicial do site
+    path('', home),  # home = pagina inicial
+    path('sobre/', sobre),
+    path('contato/', contato),
+
 ]
