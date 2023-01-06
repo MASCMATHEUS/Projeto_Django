@@ -5,9 +5,13 @@ from django.shortcuts import render
 # Cliente faz um HTTP request e recebe um HTTP response
 # HTTP REQUEST
 
+# render busca automaticamente a pasta template
+
 
 def home(request):
-    return HttpResponse('home')
+    return render(request, 'recipes/home.html', context={
+        'name': 'Matheus Alexandre'
+    })
     ...
     # return HTTP response para Cliente
 
