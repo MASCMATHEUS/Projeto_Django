@@ -1,22 +1,20 @@
-{% include 'recipes/partials/head.html' %}
 
-<body>
-    {% include 'recipes/partials/header.html' %}
-    {% include 'recipes/partials/search.html' %}
-    
-    <main class="main-content-container">
-        <div class="main-content container main-content-list">
-            {% include 'recipes/partials/recipe.html' %}
-            {% include 'recipes/partials/recipe.html' %} 
-            {% include 'recipes/partials/recipe.html' %} 
-            {% include 'recipes/partials/recipe.html' %} 
-            {% include 'recipes/partials/recipe.html' %} 
-            {% include 'recipes/partials/recipe.html' %}     
+<!--extends esta usando o block div para adicionalo no html escolhido  -->
+{% extends 'global/base.html' %}
+
+{% block title %} Home | {% endblock title %}
+
+<!--Nescessario usar {% block } nos dois arquivos 
+    para definir o bloco que vai se inserido
+    e onde ele vai ficar-->
+{% block content %}
+<div class="main-content container main-content-list">
+    {% include 'recipes/partials/recipe.html' %}
+    {% include 'recipes/partials/recipe.html' %} 
+    {% include 'recipes/partials/recipe.html' %} 
+    {% include 'recipes/partials/recipe.html' %} 
+    {% include 'recipes/partials/recipe.html' %} 
+    {% include 'recipes/partials/recipe.html' %}     
             
-        </div>
-    </main>
-
-    {% include 'recipes/partials/footer.html' %}
-</body>
-
-</html>
+</div>
+{% endblock content %}

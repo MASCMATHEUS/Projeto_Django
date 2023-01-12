@@ -1,9 +1,11 @@
 from django.urls import path
 
-from recipes.views import home
+# pode se usar . em vez de from recipes import views
+#  por que estão na mesma pasta
+from . import views
 
 urlpatterns = [
-    path('', home),  # home = pagina inicial
-
+    path('', views.home),  # home = pagina inicial
+    path('recipes/<int:id>/', views.recipe),
 
 ]

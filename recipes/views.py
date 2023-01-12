@@ -14,3 +14,9 @@ def home(request):
     })
     ...
     # return HTTP response para Cliente
+
+
+def recipe(request, id):
+    return render(request, 'recipes/pages/recipe-view.html', context={
+        'name': 'Matheus Alexandre'
+    })
