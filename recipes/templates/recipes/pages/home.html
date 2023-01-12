@@ -8,13 +8,13 @@
     para definir o bloco que vai se inserido
     e onde ele vai ficar-->
 {% block content %}
+
 <div class="main-content container main-content-list">
-    {% include 'recipes/partials/recipe.html' %}
-    {% include 'recipes/partials/recipe.html' %} 
-    {% include 'recipes/partials/recipe.html' %} 
-    {% include 'recipes/partials/recipe.html' %} 
-    {% include 'recipes/partials/recipe.html' %} 
-    {% include 'recipes/partials/recipe.html' %}     
-            
+
+    <!-- for do django-->
+    <!-- esta sendo usando para replicar o includer-->
+    {% for recipe in recipes  %}
+        {% include 'recipes/partials/recipe.html' %}    
+    {% endfor %}        
 </div>
 {% endblock content %}
